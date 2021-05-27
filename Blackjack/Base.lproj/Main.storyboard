@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blackjack View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BlackjackViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="BlackjackViewController" customModule="Blackjack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPo-TB-e9x">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Game: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTq-d5-O0W">
+                                <rect key="frame" x="0.0" y="35" width="320" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-jL-5fb">
+                                <rect key="frame" x="5" y="483" width="310" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fL-Z2-dmY">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.90266481164383561" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                        <state key="normal" title="Hit">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="hitButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sly-1U-qpF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y93-CR-goK">
+                                        <rect key="frame" x="157.5" y="0.0" width="152.5" height="80"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.89150791952054798" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                        <state key="normal" title="Stand"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="standButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uwi-mj-Izj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="HqS-zA-KWD"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Status Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jt-JV-4oA">
+                                <rect key="frame" x="0.0" y="60.5" width="320" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8zr-kb-iim">
+                                <rect key="frame" x="5" y="86" width="310" height="392"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UR-RH-gco" customClass="UIPlayerView" customModule="Blackjack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="193.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-oW-Gwg" customClass="UIPlayerView" customModule="Blackjack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="198.5" width="310" height="193.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wPo-TB-e9x" secondAttribute="trailing" id="6zS-Av-KGL"/>
+                            <constraint firstItem="S2t-jL-5fb" firstAttribute="top" secondItem="8zr-kb-iim" secondAttribute="bottom" constant="5" id="8Qg-3R-L5u"/>
+                            <constraint firstItem="wPo-TB-e9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="A53-1S-U7I"/>
+                            <constraint firstItem="3Jt-JV-4oA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AoZ-p4-mJj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8zr-kb-iim" secondAttribute="trailing" constant="5" id="EPK-Fd-iLb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QTq-d5-O0W" secondAttribute="trailing" id="I1C-qi-Te3"/>
+                            <constraint firstItem="QTq-d5-O0W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KdE-rz-xiH"/>
+                            <constraint firstItem="S2t-jL-5fb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Tau-0v-Ep2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S2t-jL-5fb" secondAttribute="trailing" constant="5" id="Wge-vU-AgR"/>
+                            <constraint firstItem="8zr-kb-iim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Yrk-2f-nhE"/>
+                            <constraint firstItem="QTq-d5-O0W" firstAttribute="top" secondItem="wPo-TB-e9x" secondAttribute="bottom" constant="5" id="cAD-2y-F5v"/>
+                            <constraint firstItem="3Jt-JV-4oA" firstAttribute="top" secondItem="QTq-d5-O0W" secondAttribute="bottom" constant="5" id="d62-67-IL4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S2t-jL-5fb" secondAttribute="bottom" constant="5" id="lfy-55-kyd"/>
+                            <constraint firstItem="8zr-kb-iim" firstAttribute="top" secondItem="3Jt-JV-4oA" secondAttribute="bottom" constant="5" id="mAn-1c-r8h"/>
+                            <constraint firstItem="wPo-TB-e9x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mhY-RD-gZb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Jt-JV-4oA" secondAttribute="trailing" id="qLb-De-o4t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentGame" destination="QTq-d5-O0W" id="bv1-rY-lmJ"/>
+                        <outlet property="dealerView" destination="5UR-RH-gco" id="fet-T3-5eL"/>
+                        <outlet property="gameStatus" destination="3Jt-JV-4oA" id="hHE-n4-P8K"/>
+                        <outlet property="userView" destination="9ga-oW-Gwg" id="Udi-LQ-w6A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="114.08450704225352"/>
+        </scene>
+    </scenes>
+</document>
